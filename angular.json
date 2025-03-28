@@ -31,7 +31,8 @@
               }
             ],
             "styles": ["src/theme/variables.scss", "src/global.scss", "node_modules/leaflet/dist/leaflet.css"],
-            "scripts": [],
+            "scripts": ["node_modules/leaflet/dist/leaflet.js",
+  "node_modules/leaflet-routing-machine/dist/leaflet-routing-machine.js"],
             "aot": false,
             "vendorChunk": true,
             "extractLicenses": false,
