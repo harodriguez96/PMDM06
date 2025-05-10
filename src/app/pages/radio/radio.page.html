@@ -1,0 +1,28 @@
+<app-page-header titulo="radio"></app-page-header>
+
+<ion-content>
+  <ion-list *ngIf="!country">
+    <ion-item *ngFor="let country of countries" (click)="selectCountry(country)">
+      <ion-label>{{country}}</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-list *ngIf="country">
+    <ion-item *ngFor="let station of stations">
+      <ion-label>
+        <h2>{{ station.name }}</h2>
+        <p>{{ station.tags }}</p>
+      </ion-label>
+
+      <!-- Play Button with icon -->
+      <ion-button (click)="play(station)" fill="clear">
+        <ion-icon size="large" slot="start" name="play" color="success"></ion-icon>
+      </ion-button>
+
+      <!-- Stop Button with icon -->
+      <ion-button (click)="stop()" fill="clear">
+        <ion-icon size="large" slot="start" name="stop" color="tertiary"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>
